@@ -1,0 +1,22 @@
+1642403282338	Move method 'addSample'
+1642464438260	Copy compilation unit
+1642464479893	Rename type 'SampleVO'
+1642464659895	Copy compilation units
+1642464683774	Rename type 'SampleDAO'
+1642464699903	Rename type 'EgovSampleServiceImpl'
+1642464714546	Copy compilation unit
+1642464731275	Rename type 'EgovSampleController'
+1642465194347	Copy compilation unit
+1642465206730	Rename type 'EgovSampleService'
+1642465323226	Rename type 'webTestDAO'
+1642465331738	Rename type 'webTestServiceimpl'
+1642465338693	Rename type 'webTestService'
+1642465344533	Rename type 'webTestVO'
+1642465353939	Rename type 'webTestController'
+1642466560317	Copy file
+1642466993490	Copy files
+1642467005708	Rename resource 'egovSampleList.jsp'
+1642467018415	Rename resource 'egovSampleRegister.jsp'
+1642468378992	Copy compilation unit
+1642468386499	Rename type 'SampleMapper'
+1642468392638	Rename type 'TstMapper'

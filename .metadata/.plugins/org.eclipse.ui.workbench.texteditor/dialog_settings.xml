@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="724"/>
+		<item key="DIALOG_Y_ORIGIN" value="396"/>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="keydown"/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="keydown"/>
+			<item value="alarm-dim-layer"/>
+			<item value="page-content-wrapper"/>
+			<item value="ol-viewport"/>
+			<item value="ol-overlaycontainer-stopevent"/>
+			<item value="hamburger is-open"/>
+			<item value="canvas"/>
+			<item value="butt"/>
+			<item value="대피소 안내"/>
+			<item value="class=&quot;panel-heading&quot;"/>
+			<item value="map.add"/>
+			<item value="map"/>
+			<item value="org.apache.maven.plugins"/>
+			<item value="plugin"/>
+			<item value="spread_accident()"/>
+		</list>
+		<list key="replacehistory">
+			<item value="WebTestVO"/>
+			<item value="webTestVO"/>
+			<item value="webTestDAO"/>
+			<item value="webtestVO"/>
+			<item value="WebtestVO"/>
+			<item value="webtstVO"/>
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1233"/>
+		<item key="DIALOG_Y_ORIGIN" value="218"/>
+		<item key="DIALOG_WIDTH" value="288"/>
+		<item key="DIALOG_HEIGHT" value="391"/>
+		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
+	</section>
+</section>
