@@ -44,13 +44,15 @@ $(function(){
 	
 	var zoomslider = new ol.control.ZoomSlider();
 	
+	//시작 위치 설정
 	olview = new ol.View({
-		center: ol.proj.transform([127.07411741084566, 37.15886078613144], 'EPSG:4326', 'EPSG:3857'),
-		zoom: 7,
+		center: ol.proj.transform([127.0000, 37.5317], 'EPSG:4326', 'EPSG:3857'),
+		zoom: 14,
         minZoom: 1,
         maxZoom: 18
 	});
-	 
+	
+	//map
 	map = new ol.Map({
 		target: 'map',
 		layers: [baseMap],
@@ -314,7 +316,7 @@ function location_maker(xy, gbn){
 		zIndex: 2
 	});
 	
-//	map.addLayer(markerLayer);
+	map.addLayer(markerLayer);
 }
 
 function destination_center_mov(id){
@@ -558,7 +560,7 @@ function shelter_mark(gbn){
 	iconFeature4.setStyle(iconStyle1);
 
 	var iconFeature5 = new ol.Feature({
-		geometry: new ol.geom.Point([Number(14142975.026447874),Number(4464810.726689826)])
+		geometry: new ol.geom.Point([Number(14127292.106),Number(4512437.827186009)])
 	});
 	iconFeature5.setStyle(iconStyle1);
 

@@ -14,6 +14,11 @@ public class HomeController {
 	@RequestMapping("main")
 	public String home(Model model) {
 		
-        return "/main/home3";
+        return "/main/Sample";
+	}
+	@RequestMapping("popup")
+	public String openPop(Model model) {
+		
+		return "/popup/jusoPopup";
 	}
 }

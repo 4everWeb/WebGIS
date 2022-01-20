@@ -12,6 +12,8 @@ $(document).ready(function () {
                 //$('#longitude').html(pos.coords.longitude); // 경도
                 curLatitude = pos.coords.latitude;
                 curLongitude = pos.coords.longitude;
+
+				$('#address').text('경기도 오산시 은여울로 29');
             });
         } else {
             alert("이 브라우저에서는 Geolocation이 지원되지 않습니다.")

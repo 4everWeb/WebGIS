@@ -58,7 +58,15 @@
 			<div id="pixel_box">
 				<div class="closeX">x</div>
 				<div id="overlay-ses"></div>
+				
 			</div>
+	
+							
+			
+			
+			
+			
+			
 <!-- 
 			<div id="pixel_box1">
 				<div class="panel-heading">
@@ -202,6 +210,9 @@
 					  			<div class="tab-pane fade" id="pills-normal" role="tabpanel" aria-labelledby="pills-normal-tab">
 					  				<table id="pills-normal-table" style="width:100%">
 										<tbody>
+											<tr>가 </tr>
+											<tr>나 </tr>
+											
 										</tbody>
 					  				</table>
 					  			</div>

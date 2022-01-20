@@ -177,6 +177,14 @@
         <finalName>${artifactId}-${version}</finalName>
         <pluginManagement>
             <plugins>
+<!--직접추가 >>> pom.xml  에러
+Could not initialize class org.apache.maven.plugin.war.util.WebappStructureSerializer
+ -->
+		       <plugin>
+		         <artifactId>maven-war-plugin</artifactId>
+		         <version>3.2.2</version>
+		       </plugin>
+		       
                 <plugin>
 	                <groupId>org.apache.tomcat.maven</groupId>
 	                <artifactId>tomcat7-maven-plugin</artifactId>
