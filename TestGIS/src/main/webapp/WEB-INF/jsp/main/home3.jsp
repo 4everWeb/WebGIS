@@ -15,6 +15,53 @@
 <c:import url="../include/css_define.jsp"></c:import>
 <c:import url="../include/js_define.jsp"></c:import>
 
+<style>
+    .input0 {
+    	width: 290px;
+        height: 50px;
+        background-color: #b0aea9;
+        border: 3px solid black;
+        border-radius: 5px;
+        readnoly;
+    }
+    .button1 {
+    	width: 30%;
+        height: 55px;
+        background-color: gold;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    .button2 {
+    	width: 30%;
+        height: 55px;
+        background-color: #5cb85c;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    .button3 {
+    	width: 30% ;
+        height: 55px;
+        background-color: #34aeeb;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    .button4 {
+    	width: 20%;
+        height: 50px;
+        background-color: #c9302c;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+    .button5 {
+    	width: 93%;
+        height: 50px;
+        background-color: #c9302c;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
+</style>
+
+
 </head>
 <body>
 	<!-- header -->
@@ -29,6 +76,7 @@
 	-->
 	<!-- contents -->
 	<div id="page-content-wrapper">
+<!-- 
 		<div id="alarm-dim-layer" class="dim-layer">
 		    <div class="dimBg"></div>
 		    <div id="layer2" class="pop-layer">
@@ -39,7 +87,7 @@
 		        </div>
 		    </div>
 		</div>
-
+ -->
 		<div id="msg-dim-layer" class="dim-layer">
 		    <div class="dimBg"></div>
 		    <div id="layer2" class="pop-layer">
@@ -164,72 +212,43 @@
 		</div>
 	</div>
 	
-<!--	
+
 	<div id="wrapper" class="toggled">
-	
-		<nav id="sidebar-wrapper">
-			<div class="accordion-group panel">
+<!-- 	전체 -->
+		<nav id="sidebar-wrapper"> 
+<!-- 	위차찾기 -->
+			<div class="accordion-group panel">  
 				<div class="panel-heading" data-parent="#sidebar-wrapper" href="#collapse1">
-					<h4 class="panel-title"><a href="#">대피소 안내</a></h4>
+					<h4 class="panel-title"><a href="#">  위치 선택</a></h4>
 				</div>
 				<div id="collapse1" class="collapse in">
 					<div class="panel-body">
-						<div>
-							<table>
-								<tr>
-									<td style="padding: 0px 0px 5px 0px">
-										<img src="resources/images/current_location.png" style="width: 30px; height: 30px;"> 현 위치 :
-									</td>
-									<td style="padding: 0px 0px 5px 5px">
-										<span id="address"></span>
-									</td>
-								</tr>
-							</table>
+						<div style="padding-top: 15px" />
+						<div style="display: flex; justify-content: space-between;">
+							<input id="input0" class="input0" type="text" placeholder="위치" readonly/>
+							<input class="button4" type="button" onClick="thorwItem();" value=" × "/>
 						</div>
-						<div style="width: 100%; border-bottom: 1px solid white;"></div>
-						<div style="padding-top: 5px">
-							<ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-								<li class="nav-item" style="width: 31%; text-align: center;">
-							    	<a class="nav-link active" id="pills-all-tab" data-toggle="pill" href="#pills-all" role="tab" aria-controls="pills-all" aria-selected="true">전체</a>
-								</li>
-							  	<li class="nav-item" style="width: 31%; text-align: center;">
-							    	<a class="nav-link" id="pills-normal-tab" data-toggle="pill" href="#pills-normal" role="tab" aria-controls="pills-normal" aria-selected="false">안전지역</a>
-							  	</li>
-							  	<li class="nav-item" style="width: 31%; text-align: center;">
-								    <a class="nav-link" id="pills-rapid-tab" data-toggle="pill" href="#pills-rapid" role="tab" aria-controls="pills-rapid" aria-selected="false">긴급대피</a>
-							  	</li>
-							</ul>
-							<div style="width: 100%; border-bottom: 1px solid white;"></div>
-							<div class="tab-content" id="pills-tabContent" style="height: 200px;">
-					  			<div class="tab-pane fade active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
-					  				<table id="pills-all-table" style="width:100%">
-										<tbody>
-										</tbody>
-					  				</table>
-					  			</div>
-					  			<div class="tab-pane fade" id="pills-normal" role="tabpanel" aria-labelledby="pills-normal-tab">
-					  				<table id="pills-normal-table" style="width:100%">
-										<tbody>
-											<tr>가 </tr>
-											<tr>나 </tr>
-											
-										</tbody>
-					  				</table>
-					  			</div>
-					  			<div class="tab-pane fade" id="pills-rapid" role="tabpanel" aria-labelledby="pills-rapid-tab">
-					  				<table id="pills-rapid-table" style="width:100%">
-										<tbody>
-										</tbody>
-					  				</table>
-					  			</div>
-							</div>
-						</div>
+						<div style="padding-top: 15px" />
+						<input id="input1"  class="input0" type="text" placeholder="위치" readonly/>
+						<div style="padding-top: 15px" />
+						<input id="input2"  class="input0" type="text" placeholder="위치" value="" readonly style="background-color:black;"/>
+						<div style="padding-top: 15px" />
+						<input id="input3"  class="input0" type="text" placeholder="위치" value="" readonly style="background-color:black;"/>
+						<div style="padding-top: 15px" />
 						
 						
+						<div id="threeButton">
+							<button type="button" class="button1" > – </button>
+							<button type="button" class="button2" > + </button>
+							<input  type="button" class="button3" onClick="goPopup();" value="위치 추가"/>
+						</div>
+						<br/>
+						<input  type="button" class="button5" onClick="transXY();" value="위치 탐색"/>
 					</div>
 				</div>
 			</div>
-			
+			<br/>
+			<br/>
 			<div class="accordion-group panel">
 				<div class="panel-heading" data-parent="#sidebar-wrapper" href="#collapse2">
 					<h4 class="panel-title"><a href="#">사고 상세 정보</a></h4>
@@ -336,7 +355,12 @@
 		<button type="button" class="hamburger is-open" data-toggle="offcanvas"></button>
 		
 	</div>
- -->
-		
 </body>
+<script>
+	plusButton =document.querySelector(".button2");
+	plusButton.addEventListener("click", plusInput);
+	minusButton =document.querySelector(".button1");
+	minusButton.addEventListener("click", minusInput);
+
+</script>
 </html>

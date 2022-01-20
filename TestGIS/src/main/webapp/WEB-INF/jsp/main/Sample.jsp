@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
     
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -10,6 +10,9 @@
 <c:import url="../include/css_define.jsp"></c:import>
 <c:import url="../include/js_define.jsp"></c:import>
 <script language="javascript">
+// 주소 객체를 담을 배열
+let address = [];
+// address.length=0;    3  address[0]
 
 function goPopup(){
 	// 주소검색을 수행할 팝업 페이지를 호출합니다.
@@ -49,6 +52,15 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 		document.form.entY.value = entY;
 		
 		
+		
+		let local = {
+		 addr : roadFullAddr,
+		 X : entX,
+		 Y : entY,
+		};
+		
+		address.push(local);
+		console.log(address);
 }
 
 </script>

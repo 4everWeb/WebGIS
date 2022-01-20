@@ -11,10 +11,16 @@ public class HomeController {
 	
 	private static Logger logger = LoggerFactory.getLogger(HomeController.class);
 
-	@RequestMapping("main")
+	@RequestMapping("home")
 	public String home(Model model) {
 		
-        return "/main/Sample";
+        return "/main/home3";
+	}
+	
+	@RequestMapping("main")
+	public String home2(Model model) {
+		
+		return "/main/Sample";
 	}
 	@RequestMapping("popup")
 	public String openPop(Model model) {

@@ -194,12 +194,12 @@ $(function(){
 //	map.addInteraction(selectSingleClick);
 
 
-	map.on('singleclick', function(event){  
-    	road_layer.once('precompose',function(event){
-      		var selectedFeatures = selectSingleClick.getFeatures();
-      		readFeature(selectedFeatures);
-    	});
-	});
+//	map.on('singleclick', function(event){  
+//    	road_layer.once('precompose',function(event){
+//      		var selectedFeatures = selectSingleClick.getFeatures();
+//      		readFeature(selectedFeatures);
+//    	});
+//	});
 
 	function readFeature(features){
 		var myfeature = features.item(0);

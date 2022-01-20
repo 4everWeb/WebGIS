@@ -30,4 +30,4 @@
 <script src="<c:url value="/resources/js/safeJs.js" />"></script>
 <script src="<c:url value="/resources/js/windy.js" />"></script>
 <script src="<c:url value="/resources/js/mapAct.js" />"></script>
-
+<script src="<c:url value="/resources/js/transForm.js" />"></script>
