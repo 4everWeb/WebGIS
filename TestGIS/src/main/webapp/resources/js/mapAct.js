@@ -2,6 +2,8 @@
 let address = [];
 let index = 0;
 let inputNum = 2;
+var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from
+var secondProjection = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"; 
 
 function goPopup(){
 	// 주소검색 팝업 페이지 호출
@@ -86,13 +88,19 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 		address.push(local);
 		console.log(address);
 		
+		movePan(local);
 		fillIn(address);
 }
 
+function movePan(local) {
+	//위치 선택 시 위치 이동
+	let xyToLat = proj4(firstProjection, secondProjection, [local.X, local.Y]);
+	let latToXy = ol.proj.transform([xyToLat[0], xyToLat[1]], 'EPSG:4326', 'EPSG:3857');
+	pan(latToXy[0], latToXy[1]);
+}
 
 
 // 좌표 변환 
-
 //var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from
 //var secondProjection = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"; //to
 ////I'm not going to redefine those two in latter examples.

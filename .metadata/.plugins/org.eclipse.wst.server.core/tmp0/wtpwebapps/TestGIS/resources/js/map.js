@@ -2,6 +2,7 @@ var map, baseMap, olview, spread_accident_layer, road_layer, current_pos_Layer, 
 var spread_accident_heatmap_blur = 60;
 var spread_accident_heatmap_radius = 10;
 
+//var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
 var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
 
 var result_bool = false;
@@ -44,13 +45,15 @@ $(function(){
 	
 	var zoomslider = new ol.control.ZoomSlider();
 	
+	//시작 위치 설정
 	olview = new ol.View({
-		center: ol.proj.transform([127.07411741084566, 37.15886078613144], 'EPSG:4326', 'EPSG:3857'),
-		zoom: 7,
+		center: ol.proj.transform([126.9782, 37.5654], 'EPSG:4326', 'EPSG:3857'),
+		zoom: 13,
         minZoom: 1,
         maxZoom: 18
 	});
-	 
+	
+	//map
 	map = new ol.Map({
 		target: 'map',
 		layers: [baseMap],
@@ -192,12 +195,12 @@ $(function(){
 //	map.addInteraction(selectSingleClick);
 
 
-	map.on('singleclick', function(event){  
-    	road_layer.once('precompose',function(event){
-      		var selectedFeatures = selectSingleClick.getFeatures();
-      		readFeature(selectedFeatures);
-    	});
-	});
+//	map.on('singleclick', function(event){  
+//    	road_layer.once('precompose',function(event){
+//      		var selectedFeatures = selectSingleClick.getFeatures();
+//      		readFeature(selectedFeatures);
+//    	});
+//	});
 
 	function readFeature(features){
 		var myfeature = features.item(0);
@@ -314,7 +317,7 @@ function location_maker(xy, gbn){
 		zIndex: 2
 	});
 	
-//	map.addLayer(markerLayer);
+	map.addLayer(markerLayer);
 }
 
 function destination_center_mov(id){
@@ -503,7 +506,7 @@ function mark_accident_pos(){
 }
 
 function shelter_mark(gbn){
-
+	alert(gbn)
 	if(destination_pos_Layer){
 		map.removeLayer(destination_pos_Layer);
 	}
@@ -558,7 +561,7 @@ function shelter_mark(gbn){
 	iconFeature4.setStyle(iconStyle1);
 
 	var iconFeature5 = new ol.Feature({
-		geometry: new ol.geom.Point([Number(14142975.026447874),Number(4464810.726689826)])
+		geometry: new ol.geom.Point([Number(14127292.106),Number(4512437.827186009)])
 	});
 	iconFeature5.setStyle(iconStyle1);
 
@@ -588,7 +591,7 @@ function shelter_mark(gbn){
 		zIndex: 2
 	});
 	
-//	map.addLayer(destination_pos_Layer);
+	map.addLayer(destination_pos_Layer);
 }
 
 

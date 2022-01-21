@@ -2,6 +2,7 @@ var map, baseMap, olview, spread_accident_layer, road_layer, current_pos_Layer, 
 var spread_accident_heatmap_blur = 60;
 var spread_accident_heatmap_radius = 10;
 
+//var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
 var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
 
 var result_bool = false;
@@ -46,8 +47,8 @@ $(function(){
 	
 	//시작 위치 설정
 	olview = new ol.View({
-		center: ol.proj.transform([127.0000, 37.5317], 'EPSG:4326', 'EPSG:3857'),
-		zoom: 14,
+		center: ol.proj.transform([126.9782, 37.5654], 'EPSG:4326', 'EPSG:3857'),
+		zoom: 13,
         minZoom: 1,
         maxZoom: 18
 	});
@@ -505,7 +506,7 @@ function mark_accident_pos(){
 }
 
 function shelter_mark(gbn){
-
+	alert(gbn)
 	if(destination_pos_Layer){
 		map.removeLayer(destination_pos_Layer);
 	}
@@ -590,7 +591,7 @@ function shelter_mark(gbn){
 		zIndex: 2
 	});
 	
-//	map.addLayer(destination_pos_Layer);
+	map.addLayer(destination_pos_Layer);
 }
 
 
