@@ -1,14 +1,15 @@
 // 주소 객체를 담을 배열
-let address = [];
-let index = 0;
-let inputNum = 2;
+
+var indexLocal = 0;
+var inputNum = 2;
 var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from
 var secondProjection = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"; 
+let addressXY =[];
+let address = [];
 
 function goPopup(){
 	// 주소검색 팝업 페이지 호출
-	if(index < inputNum){
-		index = index+1;
+	if(indexLocal < inputNum){
 		var pop = window.open('popup.do',"pop","width=570,height=420, scrollbars=yes, resizable=yes"); 
 	}
 	else{
@@ -57,13 +58,15 @@ function thorwItem(){
 			input[i].value = "";
 		}
 	}
-	address.length=0; 
-	index = 0;
+	address.length = 0; 
+	addressXY.length = 0;
+	indexLocal = 0;
+	map.removeLayer(markerLayer);
+	map.removeLayer(userDestination);
 }
 
 function fillIn(address){
 	// 위치 선택 시 인풋박스에 정보 입력
-	
 	for(let i =0; i<address.length; i++){
 		if(address[i] == null || address[i] =="" || address[i] == undefined){
 			break;
@@ -78,7 +81,7 @@ function fillIn(address){
 
 function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAddr, jibunAddr, zipNo, admCd, rnMgtSn, bdMgtSn,detBdNmList,bdNm,bdKdcd,siNm,sggNm,emdNm,liNm,rn,udrtYn,buldMnnm,buldSlno,mtYn,lnbrMnnm,lnbrSlno,emdNo,entX,entY){
 		// 팝업페이지에서 본페이지로 데이터 받음
-		
+		indexLocal = indexLocal+1;
 		let local = {
 		 addr : roadFullAddr,
 		 X : entX,
@@ -97,6 +100,11 @@ function movePan(local) {
 	let xyToLat = proj4(firstProjection, secondProjection, [local.X, local.Y]);
 	let latToXy = ol.proj.transform([xyToLat[0], xyToLat[1]], 'EPSG:4326', 'EPSG:3857');
 	pan(latToXy[0], latToXy[1]);
+	let positionUser = {
+		X : latToXy[0],
+		Y : latToXy[1]
+	};
+	addressXY.push(positionUser);
 }
 
 
