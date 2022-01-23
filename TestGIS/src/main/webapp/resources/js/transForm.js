@@ -9,19 +9,20 @@ function searchCenter(){
 		}
 	markUserDestination();
 	
-	var centerView = [Number(addressXY[0].X),Number(addressXY[0].Y)];
+	destination_center_mov2()
+//	var centerView = [Number(addressXY[0].X),Number(addressXY[0].Y)];
 	
-	olview.animate({
-		center: centerView,
-        duration: 2000
-	});
-	olview.animate({
-		zoom: olview.getZoom(),
-        duration: 1000
-	}, {
-		zoom: 14,
-        duration: 1000
-	});
+//	olview.animate({
+//		center: centerView,
+//        duration: 2000
+//	});
+//	olview.animate({
+//		zoom: olview.getZoom(),
+//        duration: 1000
+//	}, {
+//		zoom: 14,
+ //       duration: 1000
+//	});
 	}
 	
 }
