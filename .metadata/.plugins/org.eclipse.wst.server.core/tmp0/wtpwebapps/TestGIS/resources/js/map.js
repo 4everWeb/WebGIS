@@ -1,9 +1,9 @@
-var map, baseMap, olview, spread_accident_layer, road_layer, current_pos_Layer, accident_pos_Layer, destination_pos_Layer, umd_layer;
+var map, baseMap, olview, spread_accident_layer, road_layer, current_pos_Layer, accident_pos_Layer, destination_pos_Layer, umd_layer
 var spread_accident_heatmap_blur = 60;
 var spread_accident_heatmap_radius = 10;
 
 //var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
-var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
+var ServerUrl = "http://192.168.0.7:3004/MapPrimeServer";
 
 var result_bool = false;
 var timeClick_bool = false;
@@ -292,10 +292,6 @@ function location_maker(xy, gbn){
 		map.removeLayer(markerLayer);
 	}
 	
-	var iconFeature = new ol.Feature({
-		geometry: new ol.geom.Point(xy)
-	});
-	
 	var iconStyle = new ol.style.Style({
 		image: new ol.style.Icon(({
 			scale: 0.5,
@@ -305,7 +301,11 @@ function location_maker(xy, gbn){
 			src: imgsrc
         }))
 	});
-
+	
+	var iconFeature = new ol.Feature({
+		geometry: new ol.geom.Point(xy)
+	});
+	
 	iconFeature.setStyle(iconStyle);
 
 	var vectorSource = new ol.source.Vector({

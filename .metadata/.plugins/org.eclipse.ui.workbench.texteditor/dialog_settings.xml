@@ -5,13 +5,19 @@
 		<item key="DIALOG_Y_ORIGIN" value="396"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="accident"/>
+		<item key="selection" value="read"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="read_fe"/>
+			<item value="read_f"/>
+			<item value="read_fea"/>
+			<item value="read"/>
+			<item value="r"/>
+			<item value="findroad"/>
 			<item value="accident"/>
 			<item value="key"/>
 			<item value="num"/>
@@ -21,12 +27,6 @@
 			<item value="shelter_mark"/>
 			<item value="mark_accident_pos"/>
 			<item value="zoom"/>
-			<item value="map"/>
-			<item value="fillIn"/>
-			<item value="daddress "/>
-			<item value="wfs"/>
-			<item value="wms"/>
-			<item value="location_maker"/>
 		</list>
 		<list key="replacehistory">
 			<item value="WebTestVO"/>

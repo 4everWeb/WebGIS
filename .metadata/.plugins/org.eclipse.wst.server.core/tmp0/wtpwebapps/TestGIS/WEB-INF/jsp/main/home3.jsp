@@ -243,7 +243,7 @@
 							<input  type="button" class="button3" onClick="goPopup();" value="위치 추가"/>
 						</div>
 						<br/>
-						<input  type="button" class="button5" onClick="transXY();" value="위치 탐색"/>
+						<input  type="button" class="button5" onClick="searchCenter();" value="위치 탐색"/>
 					</div>
 				</div>
 			</div>
