@@ -69,7 +69,7 @@ function markCenter(centerXY){
 	// 선택 위치 모두 표시
 	
 		
-	if(typeof centerDestination!="undefined"){
+	if(typeof markerLayer!="undefined"){
 		map.removeLayer(centerDestination);
 	}
 	
@@ -135,11 +135,8 @@ function destinationCenterMove(){
 				X: arrX[0] +((arrX[3] - arrX[0])/2),
 				Y: arrY[0] +((arrY[3] - arrY[0])/2),
 			};
-			
-			
-//			centerView(centerXY);
+			centerView(centerXY);
 			markCenter(centerXY);
-			map.getView().fit([arrX[0],arrY[0],arrX[3],arrY[3]], {size:map.getSize(), maxZoom:16, duration: 1000});
 	    	break;
 	    }
 }

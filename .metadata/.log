@@ -8109,3 +8109,42 @@ java.io.IOException: Unable to resolve plug-in "egovframework.dev.imp.dbio".
 
 !ENTRY org.eclipse.lsp4e 1 0 2022-01-24 17:14:54.172
 !MESSAGE [Info]	ESLint server running in node v16.9.0
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:15.468
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:15.496
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:15.515
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-01-24 17:46:17.899
+!MESSAGE [Info]	ESLint server running in node v16.9.0
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:40.129
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:40.166
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:40.173
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-01-24 17:46:48.994
+!MESSAGE [Info]	ESLint server running in node v16.9.0
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:53.522
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:53.546
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2022-01-24 17:46:53.552
+!MESSAGE Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.lsp4e 1 0 2022-01-24 17:46:56.284
+!MESSAGE [Info]	ESLint server running in node v16.9.0
+
+!ENTRY org.eclipse.ui 2 2 2022-01-24 17:53:12.349
+!MESSAGE Invalid property category path: org.springframework.ide.eclipse.beans.ui.properties.ProjectPropertyPage (bundle: org.springframework.ide.eclipse.xml.namespaces, propertyPage: org.springframework.ide.eclipse.beans.ui.namespaces.projectPropertyPage)

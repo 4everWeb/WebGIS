@@ -6484,3 +6484,30 @@ Caused by: java.lang.NoClassDefFoundError: Could not initialize class org.apache
 2022-01-24 17:14:19,212 [Worker-153: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
 2022-01-24 17:14:19,244 [Worker-153: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-01-24 17:14:19,245 [Worker-153: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eGovFrameDev-3.10.0-64bit\workspace\TestGIS\src\test\resources
+2022-01-24 17:14:19,246 [Worker-153: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of TestGIS
+2022-01-24 17:14:19,246 [Worker-153: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for TestGIS
+2022-01-24 17:14:19,248 [Worker-153: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:15,394 [Worker-171: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for TestGIS
+2022-01-24 17:46:15,466 [Worker-169: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:15,469 [Worker-169: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2022-01-24 17:46:15,495 [Worker-169: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:15,497 [Worker-169: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eGovFrameDev-3.10.0-64bit\workspace\TestGIS\src\test\resources
+2022-01-24 17:46:15,498 [Worker-169: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of TestGIS
+2022-01-24 17:46:15,498 [Worker-169: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for TestGIS
+2022-01-24 17:46:15,514 [Worker-169: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:40,052 [Worker-165: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for TestGIS
+2022-01-24 17:46:40,128 [Worker-172: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:40,130 [Worker-172: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2022-01-24 17:46:40,165 [Worker-172: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:40,166 [Worker-172: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eGovFrameDev-3.10.0-64bit\workspace\TestGIS\src\test\resources
+2022-01-24 17:46:40,167 [Worker-172: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of TestGIS
+2022-01-24 17:46:40,167 [Worker-172: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for TestGIS
+2022-01-24 17:46:40,172 [Worker-172: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:53,452 [Worker-169: Cleaning all projects] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Cleaning filtered folder for TestGIS
+2022-01-24 17:46:53,521 [Worker-171: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:53,522 [Worker-171: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
+2022-01-24 17:46:53,545 [Worker-171: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-01-24 17:46:53,546 [Worker-171: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eGovFrameDev-3.10.0-64bit\workspace\TestGIS\src\test\resources
+2022-01-24 17:46:53,546 [Worker-171: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of TestGIS
+2022-01-24 17:46:53,546 [Worker-171: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for TestGIS
+2022-01-24 17:46:53,551 [Worker-171: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!

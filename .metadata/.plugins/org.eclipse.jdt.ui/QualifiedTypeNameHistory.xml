@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-<fullyQualifiedTypeName name="egovframework.example.sample.service.SampleDefaultVO"/>
-<fullyQualifiedTypeName name="egovframework.example.webTest.service.WebTestService"/>
-<fullyQualifiedTypeName name="egovframework.example.sample.service.impl.SampleMapper"/>
-<fullyQualifiedTypeName name="egovframework.example.webTest.service.WebTestVO"/>
-<fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
-<fullyQualifiedTypeName name="egovframework.example.webTest.web.WebTestController"/>
-<fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
-<fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="egovframework.example.sample.service.SampleDefaultVO"/>
+    <fullyQualifiedTypeName name="egovframework.example.webTest.service.WebTestService"/>
+    <fullyQualifiedTypeName name="egovframework.example.sample.service.impl.SampleMapper"/>
+    <fullyQualifiedTypeName name="egovframework.example.webTest.service.WebTestVO"/>
+    <fullyQualifiedTypeName name="org.apache.ibatis.annotations.Mapper"/>
+    <fullyQualifiedTypeName name="egovframework.example.webTest.web.WebTestController"/>
+    <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
 </qualifiedTypeNameHistroy>

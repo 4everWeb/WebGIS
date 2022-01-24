@@ -5,28 +5,28 @@
 		<item key="DIALOG_Y_ORIGIN" value="396"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="read"/>
+		<item key="selection" value="centerDestination"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="true"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="read_fe"/>
-			<item value="read_f"/>
-			<item value="read_fea"/>
-			<item value="read"/>
-			<item value="r"/>
-			<item value="findroad"/>
-			<item value="accident"/>
-			<item value="key"/>
-			<item value="num"/>
-			<item value="shelter_mark("/>
-			<item value="shelter_mark(gbn)"/>
-			<item value=" shelter_mark(gbn)"/>
-			<item value="shelter_mark"/>
-			<item value="mark_accident_pos"/>
-			<item value="zoom"/>
+			<item value="centerDestination"/>
+			<item value="centerDestination "/>
+			<item value="pan"/>
+			<item value="fan"/>
+			<item value="centerMove"/>
+			<item value="getGeometry"/>
+			<item value="feature "/>
+			<item value="center"/>
+			<item value="centerOf"/>
+			<item value="centerof"/>
+			<item value="centerFeature"/>
+			<item value="getExtentOfCoord"/>
+			<item value="feature"/>
+			<item value="coord"/>
+			<item value="getCenterOfCoord"/>
 		</list>
 		<list key="replacehistory">
 			<item value="WebTestVO"/>
