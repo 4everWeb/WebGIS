@@ -3,7 +3,7 @@ var spread_accident_heatmap_blur = 60;
 var spread_accident_heatmap_radius = 10;
 
 //var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
-var ServerUrl = "http://192.168.0.7:3004/MapPrimeServer";
+var ServerUrl = "http://192.168.0.7:3004/MapPrimeServer/";
 
 var result_bool = false;
 var timeClick_bool = false;

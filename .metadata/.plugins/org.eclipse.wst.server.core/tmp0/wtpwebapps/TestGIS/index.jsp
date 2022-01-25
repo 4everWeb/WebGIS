@@ -5,5 +5,5 @@
 <%  
 String contextPath = request.getContextPath();
 
-response.sendRedirect(contextPath + "/main.do");
+response.sendRedirect(contextPath + "/home.do");
 %>

@@ -1,5 +1,49 @@
 let centerXY;
+let layerSeoul,foodLayer;
 
+function wmsGet() {
+  layerSeoul = new ol.layer.Image({
+    source: new ol.source.ImageWMS({
+      ratio: 1,
+      url: ServerUrl + "map/wms",
+      params: {
+        FORMAT: "image/png",
+        VERSION: "1.1.1",
+        tiled: true,
+        STYLES: "",
+        LAYERS: "tilemaker:cjw_seoul",
+      },
+      projection: "EPSG:3857",
+    }),
+    opacity: 0.7,
+    zIndex: 1,
+  });
+  map.addLayer(layerSeoul);
+}
+function wfsGet() {
+	var myStyle = new ol.style.Style({
+	  image: new ol.style.Circle({
+	    radius: 3,
+	    fill: new ol.style.Fill({ color: "white" }),
+	    stroke: new ol.style.Stroke({
+	      color: [0, 255, 0],
+	      width: 3,
+	    }),
+	  }),
+	});
+	  foodLayer = new ol.layer.Vector({
+	  source: new ol.source.Vector({
+	    // url: 'resources/data/TN_PBCTLT_W.geojson',
+	    url:
+	      ServerUrl +
+	      "map/wfs?SERVICE=WFS&REQUEST=GetFeature&TYPENAME=tilemaker:cjw_food&VERSION=1.0.0&outputFormat=application/json",
+	    format: new ol.format.GeoJSON(),
+	  }),
+	  style: myStyle,
+	  visible: true,
+	});
+	map.addLayer(foodLayer);
+}
 function searchCenter(){
 	//무게 중심 이동
 	if(indexLocal != inputNum){
