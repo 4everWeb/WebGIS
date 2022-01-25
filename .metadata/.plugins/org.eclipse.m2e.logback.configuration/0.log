@@ -6646,3 +6646,6 @@ Caused by: java.lang.reflect.InaccessibleObjectException: Unable to make field p
 2022-01-25 13:46:04,067 [Worker-7: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - Copying 7 resources
 2022-01-25 13:46:04,093 [Worker-7: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-01-25 13:46:04,094 [Worker-7: Building Workspace] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\eGovFrameDev-3.10.0-64bit\workspace\WebGIS\TestGIS\src\test\resources
+2022-01-25 13:46:04,095 [Worker-7: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Changed resources require a complete clean of filtered resources of TestGIS
+2022-01-25 13:46:04,095 [Worker-7: Building Workspace] INFO  o.e.m.w.i.f.ResourceFilteringBuildParticipant - Executing resource filtering for TestGIS
+2022-01-25 13:46:04,103 [Worker-7: Building Workspace] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (MS949 actually) to copy filtered resources, i.e. build is platform dependent!
