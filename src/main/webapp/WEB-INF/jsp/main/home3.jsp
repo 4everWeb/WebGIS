@@ -47,10 +47,7 @@
 				<div id="collapse1" class="collapse in">
 					<div class="panel-body">
 						<div style="padding-top: 15px" />
-						<div style="display: flex; justify-content: space-between;">
-							<input id="input0" class="input0" type="text" placeholder="위치" readonly/>
-							<input class="button4" type="button" onClick="throwItem();" value=" × "/>
-						</div>
+						<input id="input0" class="input0" type="text" placeholder="위치" readonly/>
 						<div style="padding-top: 15px" />
 						<input id="input1"  class="input0" type="text" placeholder="위치" readonly/>
 						<div style="padding-top: 15px" />
@@ -63,10 +60,13 @@
 						<div id="threeButton">
 							<button type="button" class="button1" > – </button>
 							<button type="button" class="button2" > + </button>
-							<input  type="button" class="button3" onClick="goPopup();" value="위치 추가"/>
+							<input  type="button" class="button3" onClick="goPopup();" value="위치 설정"/>
 						</div>
 						<br/>
-						<input  type="button" class="button5" onClick="searchCenter();" value="위치 탐색"/>
+						<div style="display: flex;">
+							<input  type="button" class="button5" onClick="searchCenter();" value="위치 탐색"/>
+							<input  type="button" class="button4"  onClick="throwItem();" value="전체 삭제"/>
+						</div>
 					</div>
 				</div>
 			</div>
