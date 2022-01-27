@@ -6,28 +6,32 @@ let addressXY =[];
 let address = [];
 let centerFeature;
 
-
 function showPopUp() {
 	
-	// 창 크기 지정
 	var width = 1200;
 	var height = 900;
 	
-	// pc화면기준 가운데 정렬
 	var left = (window.screen.width / 2) - (width/2);
 	var top = (window.screen.height / 4);
 	
-    	// 윈도우 속성 지정
 	var windowStatus = 'width='+width+', height='+height+', left='+left+', top='+top+', scrollbars=no, status=no, resizable=no, titlebar=no';
 	
-    	// 연결하고싶은url
-    	const url = "https://www.naver.com/";
-
-	// 등록된 url 및 window 속성 기준으로 팝업창을 연다.
+	
+    let food = myFood.innerText;
+    let local = myLocal.innerText;
+    let check = food;
+    
+    food = food.substr(5);
+    local = local.substr(5);
+    if(check !== setFood){
+    	url = `https://search.naver.com/search.naver?where=nexearch&sm=top_hty&fbm=1&ie=utf8&query=${local}+${food}`
+	}
+	else{
+		url = "https://www.naver.com/";
+	}
+	
 	window.open(url, "Search Info", windowStatus);
 }
-
-
 
 function goPopup(){
 	// 주소검색 팝업 페이지 호출
@@ -99,9 +103,10 @@ function throwItem(){
 }
 
 function deletePopup() {
+
 	//사이드바 제거
-    myLocal.innerText = "지역명 : ";
-    myFood.innerText = "음식점 : ";
+    myLocal.innerText = setLocal;
+    myFood.innerText = setFood;
 	//팝업 다시 셋팅 
 	map.removeOverlay(popup);
   	map.removeInteraction(selectSingleClick);

@@ -27,7 +27,6 @@
 
 <script src="<c:url value="/resources/js/main.js" />"></script>
 <script src="<c:url value="/resources/js/map.js" />"></script>
-<script src="<c:url value="/resources/js/safeJs.js" />"></script>
-<script src="<c:url value="/resources/js/windy.js" />"></script>
+<!-- 직접 추가 -->
 <script src="<c:url value="/resources/js/mapAct.js" />"></script>
 <script src="<c:url value="/resources/js/transForm.js" />"></script>

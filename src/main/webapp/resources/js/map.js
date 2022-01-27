@@ -14,6 +14,9 @@ var accident_alarm, accident_running_time;
 var accident_alarm_cnt = 0;
 var accident_task = 1;
 var currentTime;
+const setFood = "음식점 :";
+const setLocal = "지역명 :";
+let url = "https://www.naver.com/";
 
 $(function() {
 
@@ -99,8 +102,8 @@ $(function() {
 				$(element).attr('data-placement', 'top');
 				$(element).attr('data-html', true);
 
-				myLocal.innerText = "지역명 : " + myfeature.get('sig_kor_nm');
-				myFood.innerText = "음식점 : " + myfeature.get('wardname');
+				myLocal.innerText = setLocal + myfeature.get('sig_kor_nm');
+				myFood.innerText = setFood + myfeature.get('wardname');
 
 				$(element).attr(
 						'data-content',
