@@ -3,12 +3,6 @@ let layerSeoul,foodLayer;
 let arrX,arrY;
 let circleLayer;
 let centerDestination, userDestination;
-//centerXY
-//{X: 14128855.106469607, Y: 4512000.282362949}
-//126.9384 /37.5600
-//"map/wfs?SERVICE=WFS&REQUEST=GetFeature&TYPENAME=tilemaker:cjw_food&VERSION=1.0.0&outputFormat=application/json&cql_filter=DWITHIN(geom,POINT(126.9384 37.5600),5000,meters)",
-//2500 , 2000
-
 
 function addCircle(centerXY) {
 	//목표지점 원 그리기

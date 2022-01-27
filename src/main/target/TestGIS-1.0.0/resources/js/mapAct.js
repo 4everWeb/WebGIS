@@ -48,7 +48,7 @@ function minusInput(){
 	}
 }
 
-function thorwItem(){
+function throwItem(){
 	// 인풋박스 값 제거
 	for(let i =0; i<address.length; i++){
 		if(address[i] == null || address[i] =="" || address[i] == undefined){

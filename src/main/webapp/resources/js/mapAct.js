@@ -1,5 +1,3 @@
-// 주소 객체를 담을 배열
-
 var indexLocal = 0;
 var inputNum = 2;
 var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from
@@ -71,7 +69,7 @@ function minusInput(){
 	}
 }
 
-function thorwItem(){
+function throwItem(){
 	// 인풋박스 값 제거
 	for(let i =0; i<address.length; i++){
 		if(address[i] == null || address[i] =="" || address[i] == undefined){
@@ -101,6 +99,9 @@ function thorwItem(){
 }
 
 function deletePopup() {
+    myLocal.innerText = "지역명 : ";
+    myFood.innerText = "음식점 : ";
+	
 	map.removeOverlay(popup);
   	map.removeInteraction(selectSingleClick);
 	selectSingleClick = new ol.interaction.Select();
@@ -113,6 +114,8 @@ function deletePopup() {
 	    offset: [0, -20]
 	});
 	map.addOverlay(popup);
+	
+	
 }
 
 function fillIn(address){
@@ -157,43 +160,13 @@ function movePan(local) {
 	addressXY.push(positionUser);
 }
 
-//function findroad(){
-//	
-//	var roadSource;
-//	var feature;
-//	
-//		feature = new ol.Feature({
-//	        geometry: new ol.geom.LineString([
-//		    	[14144142.43805873, 4461322.092581252],[14143993.545000171, 4461413.259601108],[14143911.534487171, 4461458.644086652],[14143449.125130663, 4461463.036704018],[14143435.589431202, 4461967.839620842],[14143408.517959384, 4462008.446810342],[14143394.5841747, 4462786.750950777],[14143404.138803236, 4462824.9694649195],[14143398.565245626, 4463033.578842468],[14143361.14293838, 4463172.91716313],[14143322.924424235, 4463254.927749026],[14143213.449585572, 4463410.575196084],[14143829.72312612, 4463834.163752129],[14143945.971155236, 4463987.0378086995],[14143627.483440185, 4464189.277494637],[14143226.18896879, 4464506.172650104],[14142972.991312595, 4464819.883014438]
-//				])
-//	    });
-//	    
-//	    roadSource = new ol.source.Vector();
-//	    roadSource.addFeature(feature);
-//    
-//	road_layer = new ol.layer.Vector({
-//	    source: roadSource,
-//	    style: new ol.style.Style({
-//	        stroke: new ol.style.Stroke({
-//	            //color: 'rgba(0, 255, 0, 1.0)',
-//	        	color: 'rgba(255, 0, 0, 1.0)',
-//	            width: 4
-//	        }),
-//	        fill: new ol.style.Fill({
-//	            //color: 'rgba(0,255,0,0.4)'
-//	            color: 'rgba(255,0,0,0.4)'
-//	        })
-//	    })
-//	});
-//    
-//    map.addLayer(road_layer);
-//    
-//    destination_center_mov2();
-//}
 
 
-
-
+//centerXY
+//{X: 14128855.106469607, Y: 4512000.282362949}
+//126.9384 /37.5600
+//"map/wfs?SERVICE=WFS&REQUEST=GetFeature&TYPENAME=tilemaker:cjw_food&VERSION=1.0.0&outputFormat=application/json&cql_filter=DWITHIN(geom,POINT(126.9384 37.5600),5000,meters)",
+//2500 , 2000
 
 // 좌표 변환 
 //var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from

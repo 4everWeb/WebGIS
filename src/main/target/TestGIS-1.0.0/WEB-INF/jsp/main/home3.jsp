@@ -226,7 +226,7 @@
 						<div style="padding-top: 15px" />
 						<div style="display: flex; justify-content: space-between;">
 							<input id="input0" class="input0" type="text" placeholder="위치" readonly/>
-							<input class="button4" type="button" onClick="thorwItem();" value=" × "/>
+							<input class="button4" type="button" onClick="throwItem();" value=" × "/>
 						</div>
 						<div style="padding-top: 15px" />
 						<input id="input1"  class="input0" type="text" placeholder="위치" readonly/>
