@@ -1,6 +1,6 @@
 var indexLocal = 0;
 var inputNum = 2;
-var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from
+var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; // from
 var secondProjection = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"; 
 let addressXY =[];
 let address = [];
@@ -9,21 +9,21 @@ let centerFeature;
 
 function showPopUp() {
 	
-	//창 크기 지정
+	// 창 크기 지정
 	var width = 1200;
 	var height = 900;
 	
-	//pc화면기준 가운데 정렬
+	// pc화면기준 가운데 정렬
 	var left = (window.screen.width / 2) - (width/2);
 	var top = (window.screen.height / 4);
 	
-    	//윈도우 속성 지정
+    	// 윈도우 속성 지정
 	var windowStatus = 'width='+width+', height='+height+', left='+left+', top='+top+', scrollbars=no, status=no, resizable=no, titlebar=no';
 	
-    	//연결하고싶은url
+    	// 연결하고싶은url
     	const url = "https://www.naver.com/";
 
-	//등록된 url 및 window 속성 기준으로 팝업창을 연다.
+	// 등록된 url 및 window 속성 기준으로 팝업창을 연다.
 	window.open(url, "Search Info", windowStatus);
 }
 
@@ -40,7 +40,7 @@ function goPopup(){
 }
 
 function plusInput(){
-	//inputbox 추가
+	// inputbox 추가
 	if(inputNum<4){
 		const inputBox = document.querySelectorAll(".input0")[inputNum];
 		inputNum = inputNum+1;
@@ -52,7 +52,7 @@ function plusInput(){
 }
 
 function minusInput(){
-	//inputbox 삭제
+	// inputbox 삭제
 	if(inputNum>2){
 		inputNum = inputNum-1;
 		const inputBox = document.querySelectorAll(".input0")[inputNum];
@@ -94,14 +94,15 @@ function throwItem(){
 	delete centerXY.Y;
 	
 	
-	//팝업 지우고 다시 셋팅 >> 위치 탐색할때도 필요
+	// 팝업 지우고 다시 셋팅 >> 위치 탐색할때도 필요
 	deletePopup();
 }
 
 function deletePopup() {
+	//사이드바 제거
     myLocal.innerText = "지역명 : ";
     myFood.innerText = "음식점 : ";
-	
+	//팝업 다시 셋팅 
 	map.removeOverlay(popup);
   	map.removeInteraction(selectSingleClick);
 	selectSingleClick = new ol.interaction.Select();
@@ -149,7 +150,7 @@ function jusoCallBack(roadFullAddr,roadAddrPart1,addrDetail,roadAddrPart2,engAdd
 }
 
 function movePan(local) {
-	//위치 선택 시 위치 이동
+	// 위치 선택 시 위치 이동
 	let xyToLat = proj4(firstProjection, secondProjection, [local.X, local.Y]);
 	let latToXy = ol.proj.transform([xyToLat[0], xyToLat[1]], 'EPSG:4326', 'EPSG:3857');
 	pan(latToXy[0], latToXy[1]);
@@ -162,16 +163,21 @@ function movePan(local) {
 
 
 
-//centerXY
-//{X: 14128855.106469607, Y: 4512000.282362949}
-//126.9384 /37.5600
-//"map/wfs?SERVICE=WFS&REQUEST=GetFeature&TYPENAME=tilemaker:cjw_food&VERSION=1.0.0&outputFormat=application/json&cql_filter=DWITHIN(geom,POINT(126.9384 37.5600),5000,meters)",
-//2500 , 2000
+// centerXY
+// {X: 14128855.106469607, Y: 4512000.282362949}
+// 126.9384 /37.5600
+// "map/wfs?SERVICE=WFS&REQUEST=GetFeature&TYPENAME=tilemaker:cjw_food&VERSION=1.0.0&outputFormat=application/json&cql_filter=DWITHIN(geom,POINT(126.9384
+// 37.5600),5000,meters)",
+// 2500 , 2000
 
-// 좌표 변환 
-//var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from
-//var secondProjection = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"; //to
-////I'm not going to redefine those two in latter examples.
-//console.log(proj4(firstProjection, secondProjection, [document.getElementById("entX").value,document.getElementById("entY").value])); // Convert 하려는 좌표
-//ol.proj.transform([127.0000, 37.5317], 'EPSG:4326', 'EPSG:3857');
-//pan(,)
+// 좌표 변환
+// var firstProjection = "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996
+// +x_0=1000000 +y_0=2000000 +ellps=GRS80 +units=m +no_defs"; //from
+// var secondProjection = "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs";
+// //to
+// //I'm not going to redefine those two in latter examples.
+// console.log(proj4(firstProjection, secondProjection,
+// [document.getElementById("entX").value,document.getElementById("entY").value]));
+// // Convert 하려는 좌표
+// ol.proj.transform([127.0000, 37.5317], 'EPSG:4326', 'EPSG:3857');
+// pan(,)

@@ -1,0 +1,49 @@
+.input0 {
+	width: 290px;
+    height: 50px;
+    background-color: #b0aea9;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.button1 {
+	width: 30%;
+    height: 55px;
+    background-color: gold;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.button2 {
+	width: 30%;
+    height: 55px;
+    background-color: #5cb85c;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.button3 {
+	width: 30% ;
+    height: 55px;
+    background-color: #34aeeb;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.button4 {
+	width: 20%;
+    height: 50px;
+    background-color: #c9302c;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.button5 {
+	width: 320px;
+    height: 50px;
+    background-color: #c9302c;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+.button6 {
+	width: 320px;
+    height: 50px;
+    background-color: #5cb85c;
+    border: 3px solid black;
+    border-radius: 5px;
+}

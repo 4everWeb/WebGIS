@@ -18,3 +18,6 @@
 <link href="<c:url value='/resources/css/map.css'/>" rel="stylesheet"> <!-- map_css -->
 
 <link href="<c:url value='/resources/css/tachyons.css'/>" rel="stylesheet"> <!-- pixel_info -->
+
+<!-- 버튼 이미지 -->
+<link href="<c:url value='/resources/css/myButton.css'/>" rel="stylesheet"> 
