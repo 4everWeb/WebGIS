@@ -39,7 +39,7 @@ function addCircle(centerXY) {
 	          color: 'rgba( 230, 237, 230 ,0.5)'
 	      }),
 	      text : new ol.style.Text({  //텍스트
-	        text: '중앙!',
+	        text: '여기서 만나자!',
 	        textAlign: 'center',
 	        font: '15px roboto,sans-serif'          
 	      })

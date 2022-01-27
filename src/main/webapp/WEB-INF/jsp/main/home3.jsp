@@ -59,11 +59,20 @@
         border: 3px solid black;
         border-radius: 5px;
     }
+    .button6 {
+    	width: 93%;
+        height: 50px;
+        background-color: #5cb85c;
+        border: 3px solid black;
+        border-radius: 5px;
+    }
 </style>
 
 
 </head>
 <body>
+
+ 
 	<!-- header -->
 	<!--
 	<nav class="navbar-static-top">
@@ -102,16 +111,13 @@
 		
 		<div id="map">
 			<canvas id="windyMap" class="fill"></canvas>
-			
+			<div id="popup" style="width:100%;"></div>
+			<div id="popup" style="width:100%;"></div>
 			<div id="pixel_box">
 				<div class="closeX">x</div>
 				<div id="overlay-ses"></div>
-				
-			</div>
+		</div>
 	
-							
-			
-			
 			
 			
 			
@@ -251,97 +257,30 @@
 			<br/>
 			<div class="accordion-group panel">
 				<div class="panel-heading" data-parent="#sidebar-wrapper" href="#collapse2">
-					<h4 class="panel-title"><a href="#">장소 상세 정보</a></h4>
+					<h4 class="panel-title"><a href="#">장소 정보</a></h4>
 				</div>
 				<div id="collapse2" class="collapse in">
 					<div class="panel-body">
 						<div>
 							<table style="width:100%">
 								<tr>
-									<td style="width:30%; padding-bottom:10px">사고위치 :</td>
+									<td id="myLocal" style="width:90%; font-size:24px; padding-bottom:10px;">지역명 :</td>
 									<td id="accident" style="width:70%; padding-bottom: 10px;"></td>
 								</tr>
 								
 								<tr>
-									<td style="width:30%; padding-bottom:10px">사고물질 :</td>
+									<td id="myFood" style="width:90%; font-size:24px; padding-bottom:10px;">음식점 :</td>
 									<td id="accidentMatrial" style="width:70%; padding-bottom: 10px;"></td>
 								</tr>
-
-
-								<tr style="border-bottom: 1px solid white;"><td colspan="2"></tr>
-
-								<tr>
-									<td rowspan="3" style="width:30%; padding-bottom:10px">확산예상범위 :<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(위험도)</td>
-									<td style="width:70%;">
-										<span id="accident_area1" style="background-color: #d9534f;display: block; padding-left: 10px; line-height: 30px;"></span>
-									</td>
-								</tr>
-								<tr>
-									<td style="width:70%;">
-										<span id="accident_area2" style="background-color: #ded30a;display: block; padding-left: 10px; line-height: 30px;"></span>
-									</td>
-								</tr>
-								<tr>
-									<td style="width:70%;">
-										<span id="accident_area3" style="background-color: #5cb85c;display: block; padding-left: 10px; line-height: 30px;"></span>
-									</td>
-								</tr>
 							</table>
+							<br>
+							<input  type="button" class="button6" onClick="searchCenter();" value="정보 검색"/>
 						</div>
 						
-						<div style="width: 100%; border-bottom: 1px solid white; padding-top: 10px;"></div>
-						
-						<div style="padding-top: 40px;">
-							<input  type="button" class="button5" onClick="getWMS();" value="getWFS2"/>
-							<input  type="button" class="button5" onClick="getWFS();" value="getWFS"/>
-						</div>
-						
-						<div style="padding-top: 40px;">
-							<table style="width:100%">
-								<tr>
-									<td style="width: 60%; padding-left: 50px;">
-										<img src="resources/images/sun.svg">
-									</td>
-									<td style="width: 40%; font-size: 20px; padding-left: 10px;">
-										17℃ 남동<br>1.9 m/s
-									</td>
-								</tr>
-							</table>
-						</div>
+					
+				
 
-						<div style="padding-top: 20px;padding-left: 20px;">
-							<table style="width:100%">
-								<tr>
-									<td style="width: 20%;">강수확률 :</td>
-									<td style="width: 30%;">10%</td>
-									<td style="width: 20%;">강수량 :</td>
-									<td style="width: 30%;">-</td>
-								</tr>
-								<tr>
-									<td style="width: 20%;">최저/최고 : </td>
-									<td style="width: 30%;">11.2 / 21.3</td>
-									<td style="width: 20%;">습도 :</td>
-									<td style="width: 30%;">40.3%</td>
-								</tr>
-							</table>
-						</div>
-
-						<div style="padding-top: 20px;">
-							<table style="width:100%">
-								<tr>
-									<td rowspan="2" style="width: 40%; padding-left: 20px;">미세먼지 PM10 :</td>
-									<td rowspan="2" style="width: 20%; padding-left: 20px;">
-										<img src="resources/images/item01.png" style="width: 20px;">
-									</td>
-									<td style="width: 40%; padding-left: 10px;">36(1H)
-									</td>									
-								</tr>
-								<tr>
-									<td style="width: 40%; padding-left: 10px;">89(24H)
-									</td>
-								</tr>
-							</table>
-						</div>
+				
 
 
 					</div>

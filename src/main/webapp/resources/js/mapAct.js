@@ -64,15 +64,15 @@ function thorwItem(){
 			input[i].value = "";
 		}
 	}
+	address.length = 0; 
+	addressXY.length = 0;
+	indexLocal = 0;
 	map.removeLayer(markerLayer);
 	map.removeLayer(userDestination);
 	map.removeLayer(centerDestination);
 	map.removeLayer(circleLayer);
   	map.removeLayer(layerSeoul);
   	map.removeLayer(foodLayer);
-	address.length = 0; 
-	addressXY.length = 0;
-	indexLocal = 0;
 	delete centerXY.X;
 	delete centerXY.Y;
 }

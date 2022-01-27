@@ -15,10 +15,13 @@ var accident_alarm_cnt = 0 ;
 var accident_task = 1;
 var currentTime;
 
+    
+
+
 $(function(){
 	
 	//proj4.defs("EPSG:5179", "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
-	
+	var element = document.getElementById('popup');
 	baseMap = new ol.layer.Tile({
 		source: new ol.source.XYZ({
 			url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -190,13 +193,41 @@ $(function(){
 
 //myfeature.O.wardname >>함흥냉면
 //myfeature.O.sig_kor_nm >> 중구
+      var popup = new ol.Overlay({
+        element: element,
+        positioning: 'bottom-center',
+        stopEvent: false,
+        offset: [0, -20]
+      });
+      map.addOverlay(popup);
+	
 	
 	var selectSingleClick = new ol.interaction.Select();
 	map.addInteraction(selectSingleClick);
 	
 	function readFeature(features){	
 		var myfeature = features.item(0);
-		alert("음식점: " +myfeature.O.wardname+"  지역: "+ myfeature.O.sig_kor_nm);
+		if(myfeature.O.wardname != undefined){
+			alert("음식점: " +myfeature.O.wardname+"  지역: "+ myfeature.O.sig_kor_nm);
+			   if (myfeature) {
+		          var coordinates = myfeature.getGeometry().getCoordinates();
+		          popup.setPosition(coordinates);
+		          $(element).attr('data-placement', 'top');
+		          $(element).attr('data-html', true);
+		          const myLocal = document.querySelector('#myLocal');
+		          const myFood = document.querySelector('#myFood');
+		          myLocal.innerText = "지역명 : "+myfeature.get('sig_kor_nm');
+		          myFood.innerText = "음식점 : "+myfeature.get('wardname');
+		          
+		          $(element).attr('data-content', '안녕하세요 '+myfeature.get('sig_kor_nm')+'에 위치한 ' +myfeature.get('wardname')+""+' 입니다.');
+		          
+		          $(element).popover('show');
+	              var example = $(element).attr('data-content');
+                  console.log(example);
+	        } else {
+	          $(element).popover('destroy');
+			}
+		}
 	}
 
 	map.on('singleclick', function(e){  
