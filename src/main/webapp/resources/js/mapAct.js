@@ -91,10 +91,28 @@ function thorwItem(){
 	map.removeLayer(circleLayer);
   	map.removeLayer(layerSeoul);
   	map.removeLayer(foodLayer);
-  	map.removeOverlay(popup);
-  	map.removeInteraction(selectSingleClick);
+  
 	delete centerXY.X;
 	delete centerXY.Y;
+	
+	
+	//팝업 지우고 다시 셋팅 >> 위치 탐색할때도 필요
+	deletePopup();
+}
+
+function deletePopup() {
+	map.removeOverlay(popup);
+  	map.removeInteraction(selectSingleClick);
+	selectSingleClick = new ol.interaction.Select();
+	map.addInteraction(selectSingleClick);
+	
+	popup = new ol.Overlay({
+		element: element,
+	    positioning: 'bottom-center',
+	    stopEvent: false,
+	    offset: [0, -20]
+	});
+	map.addOverlay(popup);
 }
 
 function fillIn(address){

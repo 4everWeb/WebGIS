@@ -76,7 +76,7 @@ function getWMS() {
 }
 
 function getWFS() {
-	//WFS
+	//WFS cql filter 2000 meter
 	if(typeof foodLayer!="undefined"){
 		map.removeLayer(foodLayer);
 	}
@@ -103,11 +103,15 @@ function getWFS() {
 	  style: myStyle,
 	  visible: true,
 	});
+	
 	map.addLayer(foodLayer);
 }
 
 function searchCenter(){
 	//무게 중심 이동 
+	
+	//팝업 지우고 시작.
+	deletePopup();
 	if(indexLocal != inputNum){
 		alert("위치를 입력해주세요.");
 	}

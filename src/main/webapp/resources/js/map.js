@@ -4,7 +4,7 @@ var spread_accident_heatmap_radius = 10;
 
 //var ServerUrl = "https://121.140.146.242:15534/MapPrimeServer/";
 var ServerUrl = "http://121.140.9.42:3004/MapPrimeServer/";
-
+var element;
 var result_bool = false;
 var timeClick_bool = false;
 
@@ -21,7 +21,7 @@ var currentTime;
 $(function(){
 	
 	//proj4.defs("EPSG:5179", "+proj=tmerc +lat_0=38 +lon_0=127.5 +k=0.9996 +x_0=1000000 +y_0=2000000 +ellps=GRS80 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs");
-	var element = document.getElementById('popup');
+	element = document.getElementById('popup');
 	baseMap = new ol.layer.Tile({
 		source: new ol.source.XYZ({
 			url: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
@@ -193,13 +193,13 @@ $(function(){
 
 //myfeature.O.wardname >>함흥냉면
 //myfeature.O.sig_kor_nm >> 중구
-        popup = new ol.Overlay({
-        element: element,
-        positioning: 'bottom-center',
-        stopEvent: false,
-        offset: [0, -20]
-      });
-      map.addOverlay(popup);
+	popup = new ol.Overlay({
+		element: element,
+	    positioning: 'bottom-center',
+	    stopEvent: false,
+	    offset: [0, -20]
+	});
+	map.addOverlay(popup);
 	
 	
 	selectSingleClick = new ol.interaction.Select();
