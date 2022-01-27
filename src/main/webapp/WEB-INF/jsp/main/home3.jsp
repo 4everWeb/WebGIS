@@ -53,14 +53,14 @@
         border-radius: 5px;
     }
     .button5 {
-    	width: 93%;
+    	width: 320px;
         height: 50px;
         background-color: #c9302c;
         border: 3px solid black;
         border-radius: 5px;
     }
     .button6 {
-    	width: 93%;
+    	width: 320px;
         height: 50px;
         background-color: #5cb85c;
         border: 3px solid black;
@@ -274,7 +274,7 @@
 								</tr>
 							</table>
 							<br>
-							<input  type="button" class="button6" onClick="searchCenter();" value="정보 검색"/>
+							<input  type="button" class="button6" onClick="showPopUp();" value="정보 검색"/>
 						</div>
 						
 					

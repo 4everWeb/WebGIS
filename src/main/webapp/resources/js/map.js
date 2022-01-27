@@ -1,4 +1,4 @@
-var map, baseMap, olview, spread_accident_layer, road_layer, current_pos_Layer, accident_pos_Layer, destination_pos_Layer, umd_layer
+var map, popup, selectSingleClick,baseMap, olview, spread_accident_layer, road_layer, current_pos_Layer, accident_pos_Layer, destination_pos_Layer, umd_layer
 var spread_accident_heatmap_blur = 60;
 var spread_accident_heatmap_radius = 10;
 
@@ -193,7 +193,7 @@ $(function(){
 
 //myfeature.O.wardname >>함흥냉면
 //myfeature.O.sig_kor_nm >> 중구
-      var popup = new ol.Overlay({
+        popup = new ol.Overlay({
         element: element,
         positioning: 'bottom-center',
         stopEvent: false,
@@ -202,13 +202,14 @@ $(function(){
       map.addOverlay(popup);
 	
 	
-	var selectSingleClick = new ol.interaction.Select();
+	selectSingleClick = new ol.interaction.Select();
 	map.addInteraction(selectSingleClick);
+	
 	
 	function readFeature(features){	
 		var myfeature = features.item(0);
 		if(myfeature.O.wardname != undefined){
-			alert("음식점: " +myfeature.O.wardname+"  지역: "+ myfeature.O.sig_kor_nm);
+	//		alert("음식점: " +myfeature.O.wardname+"  지역: "+ myfeature.O.sig_kor_nm);
 			   if (myfeature) {
 		          var coordinates = myfeature.getGeometry().getCoordinates();
 		          popup.setPosition(coordinates);
@@ -419,9 +420,7 @@ function spread_accident(){
 			zIndex: 1,
 			minResolution:2,
 			maxResolution:20,
-			//gradient: ['#00f', '#0ff', '#0f0', '#ff0', '#f00'],
 			gradient: ['#0f0', '#0f0', '#ff0', '#ff0', '#f00'],
-			//extent: [14141835.39333435, 4463321.000517107, 14147353.19169639, 4460394.099211825]
 		});
 
 //		map.addLayer(spread_accident_layer);

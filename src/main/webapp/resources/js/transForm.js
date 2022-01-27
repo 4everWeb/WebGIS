@@ -1,7 +1,8 @@
 let centerXY;
-let layerSeoul,foodLayer,foodLayer2;
+let layerSeoul,foodLayer;
 let arrX,arrY;
 let circleLayer;
+let centerDestination, userDestination;
 //centerXY
 //{X: 14128855.106469607, Y: 4512000.282362949}
 //126.9384 /37.5600
@@ -23,11 +24,11 @@ function addCircle(centerXY) {
 	});
 	
 	var vectorSource = new ol.source.Vector({projection: 'EPSG:4326'}); //새로운 벡터 생성
-	var circle = new ol.geom.Circle(changePoints, 2500);  //좌표, 반경 넓이
+	var circle = new ol.geom.Circle(changePoints, 3140);  //좌표, 반경 넓이
 	var CircleFeature = new ol.Feature(circle); //구조체로 형성
 	vectorSource.addFeatures([CircleFeature]); // 벡터소스에 추가
 	
-	var circleLayer =new ol.layer.Vector({  //추가할 벡터레이어
+	  circleLayer =new ol.layer.Vector({  //추가할 벡터레이어
 	  source: vectorSource,
 	  style: [
 	  new ol.style.Style({
@@ -50,6 +51,10 @@ function addCircle(centerXY) {
 }
 
 function getWMS() {
+	//WMS
+	if(typeof layerSeoul!="undefined"){
+		map.removeLayer(layerSeoul);
+	}
 	//web map service
   layerSeoul = new ol.layer.Image({
     source: new ol.source.ImageWMS({
@@ -71,23 +76,25 @@ function getWMS() {
 }
 
 function getWFS() {
+	//WFS
+	if(typeof foodLayer!="undefined"){
+		map.removeLayer(foodLayer);
+	}
 	//web feature service
 	let centerWFS = [centerXY.X, centerXY.Y];
 	let transXY = ol.proj.transform(centerWFS, 'EPSG:3857', 'EPSG:4326');
 	
 	var myStyle = new ol.style.Style({
-	  image: new ol.style.Circle({
-	    radius: 3,
-	    fill: new ol.style.Fill({ color: "white" }),
-	    stroke: new ol.style.Stroke({
-	      color: [0, 255, 0],
-	      width: 3,
-	    }),
-	  }),
+	  image: new ol.style.Icon(({
+        scale: 0.1,
+        anchor: [0.5, 67],
+        anchorXUnits: 'fraction',
+        anchorYUnits: 'pixels',
+        src: 'resources/images/foodfood.png',
+      })),
 	});
 	  foodLayer = new ol.layer.Vector({
 	  source: new ol.source.Vector({
-	    // url: 'resources/data/TN_PBCTLT_W.geojson',
 	    url:
 	      ServerUrl +
 	      "map/wfs?SERVICE=WFS&REQUEST=GetFeature&TYPENAME=tilemaker:cjw_food&VERSION=1.0.0&outputFormat=application/json&cql_filter=DWITHIN(geom,POINT(" + String(transXY[0]) + " "  +String(transXY[1]) +"),2000,meters)",
@@ -100,7 +107,7 @@ function getWFS() {
 }
 
 function searchCenter(){
-	//무게 중심 이동
+	//무게 중심 이동 
 	if(indexLocal != inputNum){
 		alert("위치를 입력해주세요.");
 	}
@@ -109,15 +116,16 @@ function searchCenter(){
 		map.removeLayer(markerLayer);
 		}
 	markUserDestination();
-	
+	//유저 선택위치
 	destinationCenterMove()
+	//무게중심 마크
 	}
 	
 }
 
 
 function centerView(centerXY){
-	//view 이동
+	//view 중심 이동 사용안함
 	var centerView = [Number(centerXY.X),Number(centerXY.Y)];
 	
 	olview.animate({
@@ -137,7 +145,12 @@ function centerView(centerXY){
 
 
 function markUserDestination(){
-	// 선택 위치 모두 표시
+	// 선택 위치 표시
+	
+	if(typeof userDestination!="undefined"){
+		map.removeLayer(userDestination);
+	}
+	
 	var iconStyle = new ol.style.Style({
 		image: new ol.style.Icon(({
 	        scale: 0.5,
@@ -164,10 +177,11 @@ function markUserDestination(){
 	map.addLayer(userDestination);
 }
 
+
+
 function markCenter(centerXY){
 	// 선택 위치 모두 표시
 	
-		
 	if(typeof centerDestination!="undefined"){
 		map.removeLayer(centerDestination);
 	}
@@ -205,6 +219,7 @@ function markCenter(centerXY){
 }
 
 function destinationCenterMove(){
+	// 무게중심으로 view 이동
 	switch (addressXY.length) {
    		 case 2 :
     		centerXY = {
